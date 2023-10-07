@@ -46,7 +46,7 @@ function CompanyRegister({value,club,event}) {
         <CardFooter>
           <div className='flex justify-end gap-2 sm:gap-4'>
             <Button color='red' onClick={value}>Cancel</Button>
-            <Button color='green' onClick={handleRegister}>Register</Button>
+            <button color='green' className='bg-green-500 px-2 rounded-sm' onClick={handleRegister}>Register</button>
           </div>
         </CardFooter>
        </Card>
