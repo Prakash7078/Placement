@@ -48,6 +48,8 @@ function PlacementResults() {
   const dispatch = useDispatch();
   const [searchroll,setSearchroll]=useState("");
 const docs=useSelector((state)=>state.register.docs);
+const userInfo = useSelector((state) => state.auth.userInfo);
+
 useEffect(()=>{
   const fetchData=async()=>{
       await dispatch(getDocs());
@@ -79,10 +81,10 @@ const handleDelete=async(id)=>{
         <div className="mb-8 flex items-center justify-between gap-8">
           <div>
             <Typography variant="h5" color="blue-gray">
-              Students list
+              Placed Students list
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
-              See information about all students
+              See information about all placed students by their coordinator.
             </Typography>
           </div>
           <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
@@ -224,7 +226,7 @@ const handleDelete=async(id)=>{
                 );
               },
             )}
-            {docs.map(
+            {docs.filter((item)=>item.department===userInfo.branch).map(
               ({_id,userimage,name,department,event,year,roll,image,isVerify}, index) => {
                 const isLast = index === docs.length - 1;
                 const classes = isLast

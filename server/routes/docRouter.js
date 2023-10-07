@@ -4,7 +4,7 @@ const { uploadDoc, getDocs, updateDoc, deleteDoc } = require("../controllers/ver
 
 const router=express.Router();
 router.get("/",isAuth,getDocs);
-router.post("/:rollno",isAuth,uploadDoc);
+router.post("/:rollno",uploadDoc);
 router.patch("/update/:id",isAuth,updateDoc);
 router.delete("/delete/:id",isAuth,deleteDoc);
 // router.post("/send",isAuth,sendChats);
