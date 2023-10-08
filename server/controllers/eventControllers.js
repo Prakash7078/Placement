@@ -66,7 +66,12 @@ const eventRegistration=(expressAsyncHandler(async(req,res)=>{
             const reg=await DepartmentRegister.findOne({roll:rollno,club:club});
             console.log("reg",reg);
             if(!reg){
-                res.json({error:true,message:`You need to register for ${club} club`});
+                res.json({error:true,message:`You need to register for ${club} department`});
+                return;
+            }
+            const eventreg=await Register.findOne({event:event});
+            if(eventreg){
+                res.json({error:true,message:`You already register for ${event} company`});
                 return;
             }
             const newRegister=new Register({

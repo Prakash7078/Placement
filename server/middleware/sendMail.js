@@ -6,12 +6,12 @@ const sendMail=async(email,message)=>{
         const transporter=nodemailer.createTransport({
             service:"gmail",
             auth:{
-                user:"vvitclubs7078@gmail.com",
+                user:process.env.EMAIL,
                 pass:process.env.PASS,
             },
         });
         const mailOptions={
-            from:"vvitclubs7078@gmail.com",
+            from:process.env.EMAIL,
             to:email,
             subject:"Message from Placement Hub",
             text:`${message}`,
