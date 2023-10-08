@@ -1,9 +1,10 @@
 const express=require("express");
 const router = express.Router();
-const {getDetails,addClub,addEvent, addAdmin,updateClub, updateEvent, deleteEvent, deleteClub, addTestimony}=require("../controllers/adminControllers.js");
+const {getDetails,addClub,addEvent, addAdmin,updateClub, updateEvent, deleteEvent, deleteClub, addTestimony, uploadPlacementResults}=require("../controllers/adminControllers.js");
 const isAuth=require('../middleware/auth');
 
 router.get("/",isAuth,getDetails);
+router.post("/addExcel",isAuth,uploadPlacementResults);
 router.post("/addAdmin",isAuth,addAdmin);
 router.post("/addEvent",isAuth,addEvent);
 router.delete('/deleteClub/:id',isAuth,deleteClub);

@@ -23,6 +23,7 @@ import PasswordRequest from './pages/PasswordRequest';
 import ResetPassword from './pages/ResetPassword';
 import Calender from './Components/Calender';
 import PlacementResults from './Components/PlacementResults';
+import AddPlacedStudents from './pages/admin/AddPlacedStudents';
 // import { Dialog } from '@material-tailwind/react';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/admin/clubs" element={<AllClubs/>}/>        
         <Route path="/admin/events" element={<AllEvents/>}/>        
         <Route path="/admin/registers" element={<AllRegistrations/>}/>        
+        <Route path="/admin/placedstudents" element={<AddPlacedStudents/>}/>        
         {/* <Route path="/admin/testimony" element={<AddTestimony/>}/>         */}
         {/* <Route path="/admin/registers/:rollno/profile" element={<UserProfile/>}/>         */}
         <Route path="/admin/addAdmin" element={<AddAdmin/>}/>        

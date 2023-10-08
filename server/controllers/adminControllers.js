@@ -11,6 +11,8 @@ const StatusCodes=require('http-status-codes');
 const Register = require('../models/registerModel');
 const Testimony=require("../models/testimonialModel");
 const moment = require('moment-timezone'); // Import moment-timezone
+const xlsx=require("xlsx");
+const Placed = require('../models/placedModel');
 
 dotenv.config();
 const getDetails=async(req,res)=>{
@@ -19,7 +21,53 @@ const getDetails=async(req,res)=>{
     
     res.send({createdUser});
 };
+const uploadPlacementResults = async (req, res) => {
+    console.log("uploading document");
+    if (req.file) {
+      const file = req.file.buffer;
+  
+      const workbook = xlsx.read(file, { type: "buffer" });
+  
+      const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+      const startRow = 2; // Assuming data starts from the second row
+      const endRow = 10; // Adjust as needed
+      let studentIds =[];
+      for (let i = startRow; i <= endRow; i++) {
+        const cellAddressEmail = `A${i}`;
+        const cellAddressCompany = `B${i}`; // Assuming company name is in column B
+        const cellAddressDepartment = `C${i}`; // Assuming department is in column C
+        const cellAddressYear = `D${i}`; // Assuming CTC is in column D
+        const cellAddressRoll = `E${i}`; // Assuming placement date is in column E
+        const cellOfferLetter=`F${i}`;
+        const cellStatus=`G${i}`;
+        const cellEmail = firstSheet[cellAddressEmail];
+  
+        if (cellEmail && cellEmail.v !== undefined) {
+          const student = await User.findOne({ email: cellEmail.v });
 
+          if (student) {
+  
+            const placementResult = new Placed({
+              event: firstSheet[cellAddressCompany]?.v || "Default Company",
+              department:
+                firstSheet[cellAddressDepartment]?.v || "Default Department",
+              name:student.firstName,
+              year: firstSheet[cellAddressYear]?.v || 0,
+              roll: firstSheet[cellAddressRoll]?.v || new Date(),
+              userimage:student.image,
+              image:firstSheet[cellOfferLetter]?.v || "https://clubs-bucket.s3.ap-south-1.amazonaws.com/docs/Prakash+Ponduri+Letter.pdf",
+              isVerify:firstSheet[cellStatus]?.v || false,
+            });
+  
+            await placementResult.save();
+            console.log("uploaded succesfully");
+            // const message=`http://localhost:5173/placedverify`;
+            // await sendMail(student.email,`Please upload your offer letter In the Placement Hub Portal with this url ${message} by login into the portal`);
+          }
+        }
+      }
+    }
+}
 const addEvent=(expressAsyncHandler(async(req,res)=>{
     // const correctdate = moment(req.body.eventdate).utc().toDate(); it is when I am in localhost
     // const correctdate =event.eventDate.subtract(5, 'hour').toDate();;
@@ -186,4 +234,4 @@ const addAdmin=(expressAsyncHandler(async(req,res)=>{
        const user=await newUser.save();
         return res.status(StatusCodes.CREATED).json({message:"admin added succesfully"});
 }))
-module.exports={getDetails,addEvent,addClub,addAdmin,updateClub,updateEvent,deleteClub,deleteEvent,addTestimony};
+module.exports={getDetails,addEvent,addClub,addAdmin,updateClub,updateEvent,deleteClub,deleteEvent,addTestimony,uploadPlacementResults};

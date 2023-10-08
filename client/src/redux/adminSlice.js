@@ -18,7 +18,22 @@ export const addAdmin=createAsyncThunk(
         }
     }
 );
-
+export const uploadExcelData=createAsyncThunk(
+    "api/uploaddata",
+    async(payload)=>{
+        console.log("payload",payload);
+        try{
+            const res=await axios.post(`${BASE_URL}/api/admin/addExcel`,payload,{
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                  },
+            })
+            return res.data;
+        }catch(err){
+            console.log(err.message);
+        }
+    }
+)
 export const getReviews=createAsyncThunk(
     "api/getReviews",
     async()=>{

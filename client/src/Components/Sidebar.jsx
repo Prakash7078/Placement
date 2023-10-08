@@ -23,7 +23,7 @@ function Sidebar() {
   return (
       <div className='mt-24 '>
          <div className="hidden lg:block">
-         <Card className="fixed top-4 w-fit h-full  max-w-[20rem] p-4 shadow-2xl shadow-deep-orange-200 mt-12 ">
+         <Card className="fixed top-4 w-fit h-full  max-w-[20rem] p-4 shadow-2xl shadow-deep-orange-200 mt-12 overflow-y-scroll  ">
               <List className="font-bold text-black pt-10 ">
                 <Link to="/dashboard">
                   <ListItem>
@@ -31,6 +31,14 @@ function Sidebar() {
                         <ImHome className="h-5 w-5" />
                     </ListItemPrefix>
                     Home
+                  </ListItem>
+                </Link>
+                <Link to="/admin/placedstudents">
+                  <ListItem>
+                    <ListItemPrefix>
+                        <BsPersonFillAdd className="h-5 w-5" />
+                    </ListItemPrefix>
+                    Add Placed Students
                   </ListItem>
                 </Link>
                 <Link to='/admin/clubs'>
@@ -109,6 +117,14 @@ function Sidebar() {
                         <ImHome className="h-5 w-5" />
                     </ListItemPrefix>
                     Home
+                  </ListItem>
+                </Link>
+                <Link to="/admin/placedstudents">
+                  <ListItem>
+                    <ListItemPrefix>
+                        <BsPersonFillAdd className="h-5 w-5" />
+                    </ListItemPrefix>
+                    Add Placed Students
                   </ListItem>
                 </Link>
                 <Link to='/admin/clubs'>
