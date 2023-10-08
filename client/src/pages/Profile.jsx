@@ -60,7 +60,7 @@ function Profile() {
         <div className="flex justify-center ">
             {!edit ? <Button onClick={()=>setEdit(!edit)}>Edit Profile</Button>:<div className="flex gap-6">
               <Button color='white' className="border-2 border-black" onClick={()=>setEdit(!edit)}>Cancel</Button>
-              <Button color="brown"  onClick={()=>{setEdit(!edit);handleUpdate();}}>Save</Button>
+              <Button color="blue"  onClick={()=>{setEdit(!edit);handleUpdate();}}>Save</Button>
             </div>}
           </div>
       </form>

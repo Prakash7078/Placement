@@ -38,10 +38,10 @@ function Navbar() {
       setSearch("");
     }
   return (
-      <div className='shadow-md z-50 fixed top-0 left-0 flex justify-between py-2 sm:px-10 w-full px-2 backdrop-blur-md'>
+      <div className='shadow-sm  z-50 fixed top-0 left-0 flex justify-between py-2 sm:px-10 w-full px-2 backdrop-blur-md'>
         <div className='flex gap-3 items-center'>
             <div className='lg:hidden position:relative ml-2 md:ml-0'>
-                {!isMenuOpen ? <TiThMenu color='brown'
+                {!isMenuOpen ? <TiThMenu color='blue'
                     className={`group ${isMenuOpen ? 'text-cyan-500' : 'text-gray-500'}`}
                     onClick={toggleMenu}
                 />:<RxCross2 onClick={toggleMenu}/>}
@@ -72,7 +72,7 @@ function Navbar() {
                 initial={{scale:0}}
                 whileInView={{scale:1}}
                 transition={{duration:0.7}}>
-            <ul className='flex gap-5  px-5 py-2 rounded-full items-center  w-fit text-green-300  shadow-green-300  shadow-inner'>
+            <ul className='flex gap-5  px-5 py-2 rounded-full items-center  w-fit text-blue-300 font-bold  shadow-blue-300  shadow-inner'>
                 <li className='cursor-pointer '><Link smooth={true} duration={1000} to='#home'>Home</Link></li>
                 <li className='cursor-pointer'><Link smooth={true} duration={1000}  to='#about'>About</Link></li>
                 <li className='cursor-pointer'><Link smooth={true} duration={1000} to='#category'>Departments</Link></li>
@@ -81,10 +81,7 @@ function Navbar() {
                 <li className='cursor-pointer'>{userInfo && userInfo.isAdmin && <li><Route to='/dashboard'>Dashboard</Route></li>}</li>
             </ul>
             </motion.ul>
-            <div className='flex items-center gap-2 border-b-2 border-blue-600'>
-            <input className='bg-transparent font-bold outline-none  px-2' placeholder='search...'   value={search} onChange={(e)=>setSearch(e.target.value.toUpperCase())}/>
-            <FcSearch className='cursor-pointer' color='white' size={25} onClick={handleSearch}/>
-            </div>
+           
         </div>
         <div className='flex gap-3 items-center justify-end'>
           {/* <button><BsChatTextFill size={20}/></button> */}
@@ -95,8 +92,8 @@ function Navbar() {
               alt="profile picture"
             />
           </Badge></Route>}
-          {!userInfo ? (<Button className='bg-brown-400' onClick={handleOpen}>Sign In</Button>):
-          (<button className=' inline-flex items-center rounded-full space-x-2 p-2 bg-primary text-secondary ' onClick={handleSignout}><FiLogOut/></button>)}
+          {!userInfo ? (<Button className='bg-blue-400' onClick={handleOpen}>Sign In</Button>):
+          (<button className=' inline-flex items-center rounded-full space-x-2 p-2 bg-blue-400 text-secondary ' onClick={handleSignout}><FiLogOut/></button>)}
         </div>
         <Dialog
           size="xs"

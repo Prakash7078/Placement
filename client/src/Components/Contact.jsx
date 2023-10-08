@@ -43,14 +43,14 @@ function Contact() {
   }     
 
   return (
-    <div id="#contact" className="text-gray-600 body-font relative bg-[#fcf0cd] grid lg:grid-cols-2 grid-cols-1">
+    <div id="#contact" className="text-gray-600 body-font relative  ">
          <div className="px-5  mx-auto">
             <div className="flex flex-col text-center py-10">
               <h1 className="sm:text-3xl text-2xl font-bold title-font text-black">
                 Contact Us
               </h1>
             </div >
-            <div className="lg:w-3/4 md:w-2/3 mx-auto ">
+            <div className="w-1/2 mx-auto ">
               <form
                 // ref={form}
                 onSubmit={msgHandler}
@@ -111,33 +111,17 @@ function Contact() {
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-brown-500 border-0 py-2 px-8 focus:outline-none rounded text-lg">
+                <button className="flex mx-auto text-white bg-blue-400 border-0 py-2 px-8 focus:outline-none rounded text-lg">
                   Submit
                 </button>
               </div>
-              <div className="p-2 w-full pt-2 mt-4 border-t border-gray-200 text-center">
-                <a className="text-brown">jobportal@gmail.com</a>
-                <p>+91 xxxxxxxxxx</p>
-                <p className="leading-normal my-5">
-                  Telengana, Hyderabad
-                  <br />
-                   India
-                </p>
+              <div className="p-2 w-full pt-2 my-4 border-t border-gray-200 text-center">
+                <a className="text-blue">jobportal@gmail.com</a>
               </div>
             </form>
             </div>
           </div>
-          <div className='hidden lg:flex justify-center items-center'>
-
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.520042451368!2d80.52633517489959!3d16.34745013193009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f5c3ed3eb309%3A0x683acf350cc3161f!2sVVIT%20College%20Rd%2C%20Namburu%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1692440514886!5m2!1sen!2sin"
-            width="500"
-            height="450"
-            allowfullscreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>        
-        </div>
+        
     </div>
   )
 }

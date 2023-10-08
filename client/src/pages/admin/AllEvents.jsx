@@ -62,7 +62,7 @@ if (loading) {
           <CardHeader floated={false} shadow={false} className="rounded-none">
             <div className="mb-8 flex items-center justify-between gap-8 flex-col sm:flex-row">
               <div>
-                <Typography variant="h5" color="brown-gray">
+                <Typography variant="h5" color="blue-gray">
                   Companies List
                 </Typography>
                 <Typography color="gray" className="mt-1 font-normal" >
@@ -70,10 +70,10 @@ if (loading) {
                 </Typography>
               </div>
               <div className="flex  flex-row gap-2 shrink-0">
-                <Button variant="outlined" color="brown" size="sm" >
+                <Button variant="outlined" color="blue" size="sm" >
                   view all
                 </Button>
-                <Button className="flex gap-2" color="brown" size="sm" >
+                <Button className="flex gap-2" color="blue" size="sm" >
                     <Link to='/admin/addEvent'>
                       <div  className="flex gap-2">
                         <BiSolidAddToQueue/>

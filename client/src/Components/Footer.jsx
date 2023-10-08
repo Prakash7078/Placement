@@ -3,7 +3,7 @@ import {BsTwitter,BsBrowserChrome} from 'react-icons/bs';
 import vvit from '../assets/logo.jpg'
 function Footer() {
   return (
-    <footer className="bg-[#6d4c41] text-white ">
+    <footer className="bg-blue-900 text-white ">
       <div className="container mx-auto px-4 py-10">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/4 mb-8 md:mb-0">

@@ -76,13 +76,13 @@ function AddAdmin() {
                                 <div>
                                     <Input type="tel" label="MobileNo"name="mobileno" onChange={handleChange} value={data.mobileno}/>
                                 </div>
-                                <Button onClick={handleAdmin} color='brown'>Add Admin</Button>
+                                <Button onClick={handleAdmin} color='blue'>Add Admin</Button>
                             </form>
                             </TabPanel>
                             <TabPanel value="exist">
                                 <form onSubmit={handleAdmin} className='flex flex-col md:py-0 my-3 gap-6 sm:px-10 sm:mx-5 mx-10 px-0 w-96'>
                                     <Input size="lg" label="Email" name="email" onChange={handleChange} value={data.email}/>
-                                    <Button color='brown' onClick={handleAdmin}>Add Admin</Button>
+                                    <Button color='blue' onClick={handleAdmin}>Add Admin</Button>
                                 </form>
                             </TabPanel>
                         </TabsBody>     

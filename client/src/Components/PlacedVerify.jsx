@@ -29,7 +29,7 @@ const PlacedVerify=()=> {
         <Card className="mx-auto w-full max-w-[24rem]">
           <CardHeader
             variant="gradient"
-            color="brown"
+            color="blue"
             className="mb-4 grid h-20 place-items-center"
           >
             <Typography variant="h3" color="white">
@@ -49,7 +49,7 @@ const PlacedVerify=()=> {
                 </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button color='brown'variant="gradient" onClick={handleVerify} fullWidth>
+            <Button color='blue'variant="gradient" onClick={handleVerify} fullWidth>
               verify
             </Button>
           </CardFooter>

@@ -37,8 +37,8 @@ function Tutorials({ value }) {
   };
 
   return (
-    <div className={`${value=='home' ? 'bg-[#fff3e0]':'bg-transparent'}`}>
-      <h1 className='text-center font-bold text-2xl p-10 text-brown-700'>Packages</h1>
+    <div>
+      <h1 className='text-center font-bold text-2xl p-10 text-blue-700'>Packages</h1>
       <div className='sm:mx-20 mx-8 '>
         <Slider {...settings}>
           {data.tutorials && data.tutorials.filter((item) => item.id ===value).map((item) => (

@@ -78,7 +78,7 @@ function Signup() {
                     <div>
                         <Input type="tel" label="MobileNo"name="mobileno" onChange={handleChange} value={data.mobileno}/>
                     </div>
-                    <Button onClick={handleSignup} color='brown'>SignUp</Button>
+                    <Button onClick={handleSignup} color='blue'>SignUp</Button>
                     <Typography className='mb-5'>Already have an account <Link className='font-semibold' to='/login'>Login</Link></Typography>
                 </form>
         </div>

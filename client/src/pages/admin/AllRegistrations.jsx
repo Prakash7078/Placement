@@ -114,7 +114,7 @@ function AllRegistrations() {
                 <CardHeader floated={false} shadow={false} className="rounded-none">
                     <div className="mb-8 flex items-center justify-between gap-8 sm:flex-row flex-col">
                       <div className="text-center sm:text-left">
-                        <Typography variant="h5" color="brown-gray">
+                        <Typography variant="h5" color="blue-gray">
                           Registrations List
                         </Typography>
                         <Typography color="gray" className="mt-1 font-normal" >
@@ -122,10 +122,10 @@ function AllRegistrations() {
                         </Typography>
                       </div>
                       <div className="flex flex-row gap-2 ">
-                        <Button variant="outlined" color="brown" size="sm" >
+                        <Button variant="outlined" color="blue" size="sm" >
                           view all
                         </Button>
-                        <Button className="flex gap-2" color="brown" size="sm" >
+                        <Button className="flex gap-2" color="blue" size="sm" >
                           <MdDelete size="15"/>
                           Delete All
                         </Button>
@@ -223,7 +223,7 @@ function AllRegistrations() {
                     className: "min-w-[288px]",
                     }}
                 />
-                <Button size="sm" className="!absolute right-1 top-1 rounded bg-brown-600">
+                <Button size="sm" className="!absolute right-1 top-1 rounded bg-blue-600">
                     Search
                 </Button>
             </div>
@@ -246,7 +246,7 @@ function AllRegistrations() {
                 <tbody>
                 {currentProducts?.filter((item)=>item.roll===searchroll).map((product) => (
                     
-                    <tr key={product._id} className='bg-brown-200 font-bold'>
+                    <tr key={product._id} className='bg-blue-200 font-bold'>
                     <td className="border-none text-center px-4 py-2"><Link to={`${product.roll}/profile`}><img className="rounded-full w-10 h-10 mx-auto"src={product.userimage}/></Link></td>
                     <td className="border-none text-center px-4 py-2">
                         {product.name}

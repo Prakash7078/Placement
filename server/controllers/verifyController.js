@@ -23,7 +23,7 @@ const deleteDoc=async(req,res)=>{
         return res.status(404).send({ message: "User not found" });
       }
       const placemail=user.email;
-    const message=`https://placement-nine.vercel.app/placedverify`;
+    const message=`http://localhost:5173/placedverify`;
     await sendMail(placemail,`Your Offer letter verification is rejected by your coordinator please re upload it using the link ${message}`);
     await Placed.findByIdAndDelete(req.params.id);
     return res.send({message:"Offer Letter Rejected"});

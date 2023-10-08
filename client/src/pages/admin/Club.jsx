@@ -62,9 +62,9 @@ function Club() {
                         </Typography>: <Typography variant="h4" color="blue-gray">
                             Add Department
                         </Typography>}
-                        <Input color="brown" className='' label='Department Name' type='text' value={clubdata?.name} onChange={(e)=>setClubdata({...clubdata,["name"] : e.target.value.toUpperCase()})}/>
-                        <Textarea color="brown"label="Department Description" type='text' value={clubdata?.desc} onChange={(e)=>setClubdata({...clubdata,["desc"] : e.target.value})} />
-                        <Button color="brown" type='submit'>Submit</Button>
+                        <Input color="blue" className='' label='Department Name' type='text' value={clubdata?.name} onChange={(e)=>setClubdata({...clubdata,["name"] : e.target.value.toUpperCase()})}/>
+                        <Textarea color="blue"label="Department Description" type='text' value={clubdata?.desc} onChange={(e)=>setClubdata({...clubdata,["desc"] : e.target.value})} />
+                        <Button color="blue" type='submit'>Submit</Button>
                    </div>
                 </form>
             </Card>

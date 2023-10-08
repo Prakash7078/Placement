@@ -11,10 +11,10 @@ const Team = (props) => {
         <section className="">
           <div className=" px-4 mx-auto max-w-screen-xl text-center pt-10 ">
             <div className="mx-auto mb-8 max-w-screen-sm ">
-              <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-brown-700">
+              <h2 className="mb-4 text-5xl tracking-tight font-extrabold text-blue-700">
                 Our Team
               </h2>
-              <p className="font-light sm:text-xl text-brown-400">
+              <p className="font-light sm:text-xl text-blue-400">
                 Coordinators
               </p>
             </div>
@@ -49,13 +49,13 @@ const Team = (props) => {
                         src={member.userimage}
                         alt="Bonnie Avatar"
                       />
-                      <div className="pb-5 shadow-inner shadow-brown-300 bg-white py-3">
+                      <div className="pb-5  bg-white py-3">
                         <h3 className="mb-1 text-2xl font-bold tracking-tight">
                           <p className="font-serif">{member.name}</p>
                         </h3>
                         <p>{member.branch}</p>
                         <p>{member.roll}</p>                    
-                        <Link to={`${member.roll}/profile`}><Button color="brown" className="mt-3">Profile</Button></Link>               
+                        <Link to={`${member.roll}/profile`}><Button color="blue" className="mt-3">Profile</Button></Link>               
                       </div>
                     </div>
                   </SplideSlide>

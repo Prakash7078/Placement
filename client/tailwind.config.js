@@ -5,7 +5,7 @@ export default withMT({
   theme: {
     extend: {
       colors: {
-        primary: "#523C1E",
+        primary: "#0000FF",
         secondary: "#FAF7F0",
       },
       screens: {

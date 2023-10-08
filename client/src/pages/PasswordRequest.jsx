@@ -54,7 +54,7 @@ function PasswordRequest(props) {
         <Card className="mx-auto w-full max-w-[24rem]">
           <CardHeader
             variant="gradient"
-            color="brown"
+            color="blue"
             className="mb-10 grid h-20 place-items-center"
           >
             <Typography variant="h5" color="white">
@@ -65,7 +65,7 @@ function PasswordRequest(props) {
             <Input label="Email" size="lg" onChange={handleChange} value={email} name='email' />
           </CardBody>
           <CardFooter className="pt-0">
-            <Button color='brown'variant="gradient" onClick={handlePassword} fullWidth>
+            <Button color='blue'variant="gradient" onClick={handlePassword} fullWidth>
               Send Email
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
@@ -74,7 +74,7 @@ function PasswordRequest(props) {
                 as="a"
                 href="/login"
                 variant="small"
-                color="brown"
+                color="blue"
                 className="ml-1 font-bold"
               >
                 Log In

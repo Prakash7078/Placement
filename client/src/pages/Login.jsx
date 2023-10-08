@@ -56,7 +56,7 @@ function Login(props) {
         <Card className="mx-auto w-full max-w-[24rem]">
           <CardHeader
             variant="gradient"
-            color="brown"
+            color="blue"
             className="mb-4 grid h-20 place-items-center"
           >
             <Typography variant="h3" color="white">
@@ -71,7 +71,7 @@ function Login(props) {
             </div>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button color='brown'variant="gradient" onClick={handleLogin} fullWidth>
+            <Button color='blue'variant="gradient" onClick={handleLogin} fullWidth>
               Sign In
             </Button>
             <Typography variant="small" className="mt-6 flex justify-center">
@@ -79,7 +79,7 @@ function Login(props) {
               <Link to="/signup">              
               <Typography
                 variant="small"
-                color="brown"
+                color="blue"
                 onClick={value}
                 className="ml-1 font-bold"
               >

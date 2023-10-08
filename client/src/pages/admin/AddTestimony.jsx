@@ -46,10 +46,10 @@ function AddTestimony(){
                         <Typography variant="h4" color="blue-gray">
                             Add Testimonial
                         </Typography>
-                        <Input color="brown" className='' label='Name' type='text' value={profileData.name} onChange={(e)=>setProfileData({...profileData,["name"] : e.target.value})}/>
-                        <Input color="brown" className='' label='Position' type='text' value={profileData.position} onChange={(e)=>setProfileData({...profileData,["position"] : e.target.value})}/>
-                        <Textarea color="brown"label="Description" type='text' value={profileData.desc} onChange={(e)=>setProfileData({...profileData,["desc"] : e.target.value})} />
-                        <Button color="brown" type='submit'>Submit</Button>
+                        <Input color="blue" className='' label='Name' type='text' value={profileData.name} onChange={(e)=>setProfileData({...profileData,["name"] : e.target.value})}/>
+                        <Input color="blue" className='' label='Position' type='text' value={profileData.position} onChange={(e)=>setProfileData({...profileData,["position"] : e.target.value})}/>
+                        <Textarea color="blue"label="Description" type='text' value={profileData.desc} onChange={(e)=>setProfileData({...profileData,["desc"] : e.target.value})} />
+                        <Button color="blue" type='submit'>Submit</Button>
                    </div>
                 </form>
             </Card>

@@ -13,13 +13,13 @@ function CompanyRegister({value,club,event}) {
     const handleGpa=(e)=>{
         setData({...data,cgpa:e.target.value})
     }
-    const handleRegister=async(e)=>{
+    const handleRegister=(e)=>{
       e.preventDefault();
       console.log("register for company");
         if(userInfo){
             try{
-                const res1=await dispatch(addRegister({data}));
-                await dispatch(getRegisters());
+                const res1=dispatch(addRegister({data}));
+                dispatch(getRegisters());
                 console.log(res1.payload);
 
             }catch(err){
@@ -28,6 +28,7 @@ function CompanyRegister({value,club,event}) {
         }else{
             navigate('/login');
         }
+        value();
     }
   return (
     <div>
@@ -46,7 +47,7 @@ function CompanyRegister({value,club,event}) {
         <CardFooter>
           <div className='flex justify-end gap-2 sm:gap-4'>
             <Button color='red' onClick={value}>Cancel</Button>
-            <button color='green' className='bg-green-500 px-2 rounded-sm' onClick={handleRegister}>Register</button>
+            <Button color='green'  onClick={handleRegister}>Register</Button>
           </div>
         </CardFooter>
        </Card>

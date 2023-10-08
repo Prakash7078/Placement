@@ -195,7 +195,7 @@ function ClubScreen() {
         // ],
       };
   return (
-    <div className='lg:pt-24 pt-8 bg-[#fff3e0]'>
+    <div className='lg:pt-24 pt-8 '>
         {clubs && clubs.filter((item)=>item.name===name).map((item,index)=>(
             <div key={index} className='mb-3'>
                 <Card className="flex sm:flex-row w-full mt-12  " >
@@ -265,7 +265,7 @@ function ClubScreen() {
         </Dialog>
         </Slider>}
        {userInfo &&  (userInfo.isAdmin || userInfo.category==="Coordinator") && <div>
-       <h1 className='font-bold  text-2xl sm:text-3xl pt-10 text-center text-brown-700'>Company Registrations</h1>
+       <h1 className='font-bold  text-2xl sm:text-3xl pt-10 text-center text-blue-700'>Company Registrations</h1>
         <div className='flex flex-col md:flex-row justify-between sm:mt-16 mt-10 mb-5 items-center gap-2 '>
             <div className=" flex items-center gap-3 md:mb-0 flex-wrap lg:mx-10 flex-col sm:flex-row ">
                   <div>
@@ -331,7 +331,7 @@ function ClubScreen() {
             </div>
              <div className="relative flex  md:w-max  justify-between ">
                 <Input
-                    color='brown'
+                    color='blue'
                     type="search"
                     label="Type Rollno..."
                     className="pr-24 "
@@ -340,7 +340,7 @@ function ClubScreen() {
                     className: "md:min-w-[288px] ",
                     }}
                 />
-                <Button size="sm" className="!absolute right-1 top-1 rounded bg-brown-600">
+                <Button size="sm" className="!absolute right-1 top-1 rounded bg-blue-600">
                     Search
                 </Button>
             </div>
@@ -420,32 +420,30 @@ function ClubScreen() {
          </div>}
          {currentProducts.filter((item) => item.isWinner || item.isRunner).length > 0 && (
             <div className='my-16 mx-10 relative '>
-                <h1 className='text-center text-3xl font-bold mb-16 text-brown-700'>Placement Results</h1>
+                <h1 className='text-center text-3xl font-bold mb-16 text-blue-700'>Placement Results</h1>
                 <Slider {...settings}>
                 {currentProducts.filter((item) => item.isWinner || item.isRunner).map((item) => (
-                  <div key={item.id} className='relative bg-white '>
-                    <div className='bg-brown-900 h-full md:w-10 w-4 absolute top-0 left-0 transform -translate-x-1/2 '></div>
-                    <div className='bg-brown-900 h-10 w-full absolute bottom-0 left-0 transform translate-y-1/2'></div>
+                  <div key={item.id} className='relative  '>
                     <div className='w-3/4 lg:w-1/2 mx-auto mb-10 relative overflow-hidden'>
-                      <div className=' bg-white rounded-lg lg:p-10 shadow-lg flex justify-between flex-col md:flex-row-reverse items-center'>
-                        <div className='pt-5'>
-                            <img src={item.userimage} alt='winorrun' className='w-60 h-60 object-cover rounded-full' />
-                        </div>
-                        <div className='mt-6'>                
-                          <h1 className='text-2xl font-semibold pb-5'>{item.isWinner ? <span className='flex gap-2'>Placed <img src={gold} alt='gold' className='w-10 h-10 object-cover'/></span>:<span className='flex gap-2'>Not Placed <img src={silver} alt='silver' className='w-10 h-10 object-cover'/></span>}</h1>
-                          <h1 className='text-xl font-semibold'>{item.name}</h1>
-                          <p className='text-gray-600'>{item.roll}</p>
-                          <p className='text-gray-600'>Year {item.year}</p>
-                          <p className='text-gray-600'>Branch {item.branch}</p>
-                          
-                          <div className='mt-4'>
-                            <Link to={`${item.roll}/profile`}>
-                              <button className='px-4 py-2 bg-brown-900 text-white rounded-lg'>
-                                View Profile
-                              </button>
-                            </Link>
+                      <div className=' bg-blue-200 rounded-lg lg:p-10 shadow-lg flex justify-between flex-col md:flex-row-reverse items-center'>
+                          <div className='pt-5'>
+                              <img src={item.userimage} alt='winorrun' className='w-60 h-60 object-cover rounded-full' />
                           </div>
-                        </div>
+                          <div className='mt-6'>                
+                            <h1 className='text-2xl font-semibold pb-5'>{item.isWinner ? <span className='flex gap-2'>Placed </span>:<span className='flex gap-2'>Not Placed </span>}</h1>
+                            <h1 className='text-xl font-semibold'>{item.name}</h1>
+                            <p className=''>{item.roll}</p>
+                            <p className=''>Year {item.year}</p>
+                            <p className=''>Branch {item.branch}</p>
+                            
+                            <div className='mt-4'>
+                              <Link to={`${item.roll}/profile`}>
+                                <button className='px-4 py-2 bg-blue-900 text-white rounded-lg'>
+                                  View Profile
+                                </button>
+                              </Link>
+                            </div>
+                          </div>
                         
                       </div>
                     </div>

@@ -72,13 +72,13 @@ function Event() {
                                 <option value="CIVIL">CIVIL</option>
                                 <option value="MECH">MECH</option>
                             </select>
-                        <Input label='Company Name' color='brown' type='text' value={eventdata?.name} onChange={(e)=>setEventdata({...eventdata,"name":e.target.value})}/>
-                        <Input type="datetime-local" label='Deadline' color='brown' value={eventdata?.eventdate} onChange={(e)=>setEventdata({...eventdata,"eventdate":e.target.value})} />
-                        <Input label='CGPA CutOff' color='brown' type='number' value={eventdata?.cgpa} onChange={(e)=>setEventdata({...eventdata,"cgpa":e.target.value})}/>
-                        <Input label='Register URL' color='brown' type='text' value={eventdata?.companyurl} onChange={(e)=>setEventdata({...eventdata,"companyurl":e.target.value})}/>
+                        <Input label='Company Name' color='blue' type='text' value={eventdata?.name} onChange={(e)=>setEventdata({...eventdata,"name":e.target.value})}/>
+                        <Input type="datetime-local" label='Deadline' color='blue' value={eventdata?.eventdate} onChange={(e)=>setEventdata({...eventdata,"eventdate":e.target.value})} />
+                        <Input label='CGPA CutOff' color='blue' type='number' value={eventdata?.cgpa} onChange={(e)=>setEventdata({...eventdata,"cgpa":e.target.value})}/>
+                        <Input label='Register URL' color='blue' type='text' value={eventdata?.companyurl} onChange={(e)=>setEventdata({...eventdata,"companyurl":e.target.value})}/>
 
-                        <Textarea label="Company Description" color='brown' type='text'  value={eventdata?.desc} onChange={(e)=>setEventdata({...eventdata,"desc":e.target.value})} />
-                        <Button  type='submit' color='brown'>Submit</Button>
+                        <Textarea label="Company Description" color='blue' type='text'  value={eventdata?.desc} onChange={(e)=>setEventdata({...eventdata,"desc":e.target.value})} />
+                        <Button  type='submit' color='blue'>Submit</Button>
                     </div>
                 </form>
             </Card>

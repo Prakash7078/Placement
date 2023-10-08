@@ -23,7 +23,7 @@ function Sidebar() {
   return (
       <div className='mt-24 '>
          <div className="hidden lg:block">
-         <Card className="fixed top-4 w-fit h-full  max-w-[20rem] p-4 shadow-2xl shadow-deep-orange-200 mt-12 bg-[#ffccbc]">
+         <Card className="fixed top-4 w-fit h-full  max-w-[20rem] p-4 shadow-2xl shadow-deep-orange-200 mt-12 ">
               <List className="font-bold text-black pt-10 ">
                 <Link to="/dashboard">
                   <ListItem>
@@ -96,7 +96,7 @@ function Sidebar() {
               </Card>
          </div>
           <div className="lg:hidden block ">
-            <div className="flex gap-3 items-center text-brown-900">
+            <div className="flex gap-3 items-center text-blue-900">
               <VscThreeBars onClick={openDrawer} className="ml-5"/>
               <h1 className="font-bold text-2xl ">Demo Board</h1>
             </div>

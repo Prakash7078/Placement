@@ -59,7 +59,7 @@ function ResetPassword() {
         <Card className="mx-auto w-full max-w-[24rem]">
           <CardHeader
             variant="gradient"
-            color="brown"
+            color="blue"
             className="mb-10 grid h-20 place-items-center"
           >
             <Typography variant="h5" color="white">
@@ -71,7 +71,7 @@ function ResetPassword() {
             <Input label="confirmPassword" type='password' size="lg" onChange={(e)=>setConfirmPassword(e.target.value)} value={confirmPassword} name='password' />
           </CardBody>
           <CardFooter className="pt-0">
-            <Button color='brown'variant="gradient" onClick={resetpassword} fullWidth>
+            <Button color='blue'variant="gradient" onClick={resetpassword} fullWidth>
               Update
             </Button>
           </CardFooter>

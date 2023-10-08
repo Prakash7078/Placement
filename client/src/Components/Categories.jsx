@@ -75,7 +75,7 @@ function Categories() {
   
   return (
     // <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay:0.1  }}>
-      <div id='#category' className='bg-[#fff3e0] pb-20 pt-5 '>
+      <div id='#category' className=' pb-20 pt-5 '>
           <div className='mb-10 mt-8 flex flex-col gap-2 items-center'>
               <h1 className='font-bold text-4xl'>Departments</h1>
               <h3>Choose Department</h3>
@@ -85,11 +85,11 @@ function Categories() {
               {clubs && clubs.map((product, index) => {
                 return (
                   <div key={index} >
-                          <div key={index} onClick={()=>checkLogin(product.name)} className='m-0 sm:m-5 shadow-xl pb-4  bg-white hover:scale-105 transition-all duration-500'>
+                          <div key={index} onClick={()=>checkLogin(product.name)} className='m-0 sm:m-5 shadow-xl pb-4 border-2 border-gray-300 bg-white hover:scale-105 transition-all duration-500'>
                             <img src={product.image} className=' cursor-pointer w-full h-60 object-fit   rounded-t-lg mb-10' alt='event'/>
                               <div className='flex justify-between items-center'>
                                 <h1 className='font-bold ml-4'>{product.name}</h1>
-                                <Button onClick={()=>checkLogin(product.name)} className='bg-[#8d6e63] text-white py-2 px-2 mr-4 rounded-md'>Know More&gt;&gt;</Button>
+                                <Button onClick={()=>checkLogin(product.name)} className='bg-light-blue-500 text-white py-2 px-2 mr-4 rounded-md'>Know More&gt;&gt;</Button>
                               </div>
                           </div>
                   </div>
